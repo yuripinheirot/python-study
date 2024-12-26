@@ -1,6 +1,4 @@
 import random
-import string
-from readline import clear_history
 
 chances = 0
 attempts = 0
@@ -33,7 +31,6 @@ def question_reset_game():
         print("Invalid value, try again\n")
         question_reset_game()
     elif answer == "Y":
-        clear_history()
         reset_config_game()
         init_game()
     else:
@@ -76,6 +73,7 @@ def predict_number():
             print(f"Incorrect! The number is greater than {answer} \n")
         else:
             print(f"Congratulations! You guessed the correct number in {current_attempts} attempts. \n")
+            return question_reset_game()
 
         current_attempts = current_attempts+1
 
