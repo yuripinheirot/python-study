@@ -7,7 +7,7 @@ def update_task(task_id: str, data: str):
     updated_tasks = []
 
     for task in tasks:
-        if task["id"] == task_id:
+        if task.get("id") == task_id:
             parsed_updated_task = json.loads(data)
             parsed_updated_task["id"] = task["id"]
             updated_tasks.append(parsed_updated_task)

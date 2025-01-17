@@ -12,7 +12,7 @@ def filter_tasks(status):
     tasks_filtered = []
 
     for task in tasks:
-        if task["status"] == status_dict[status]:
+        if task.get("status") == status_dict[status]:
             tasks_filtered.append(task)
 
     return tasks_filtered
