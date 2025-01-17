@@ -7,7 +7,7 @@ def delete_task(task_id: str):
     updated_tasks = []
 
     for task in tasks:
-        if task["id"] != task_id:
+        if task.get("id") != task_id:
             updated_tasks.append(task)
 
     if len(tasks) == len(updated_tasks):

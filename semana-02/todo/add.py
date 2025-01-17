@@ -9,21 +9,21 @@ def validate_task_struct(task: dict):
     diff: set = required_keys - keys
 
     if len(diff) > 0:
-        print(f"Error: {list(required_keys)} are required in data struct")
+        print(f"Error: {required_keys} are required in data struct")
         return True
 
-    if task["status"] not in ["in progress", "done", "not done"]:
+    if task.get("status") not in ["in progress", "done", "not done"]:
         print(f"Error: status must be 'in progress' or 'done'")
         return True
 
-    if len(task["desc"]) == 0:
+    if task.get("desc") is None or len(task.get("desc")) == 0:
         print(f"Error: desc should not be empty")
         return True
 
     return False
 
 def generate_task_id(task: dict):
-    task["id"] = uuid.uuid1().__str__().split('-')[0]
+    task["id"] = str(uuid.uuid1()).split('-')[0]
     return task
 
 
