@@ -12,9 +12,7 @@ data = read_file.execute()
 
 
 def execute():
-    if args.action == 'list-all':
-        return print(data)
-    if args.action in ['list-done','list-in-progress','list-done','list-not-done']:
+    if args.action in ['list-done','list-in-progress','list-done','list-not-done', 'list-all']:
         return list_tasks(args.action)
     if args.action == 'add':
         if args.data is None:

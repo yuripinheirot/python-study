@@ -1,8 +1,10 @@
 import json
 from file_manager import read_file,write_file
+from decorators import custom_logger
 
 tasks: list = read_file.execute()
 
+@custom_logger.execute
 def update_task(task_id: str, data: str):
     updated_tasks = []
 

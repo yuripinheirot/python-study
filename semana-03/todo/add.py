@@ -2,6 +2,8 @@ import uuid
 import json
 
 from file_manager import write_file, read_file
+from decorators import custom_logger
+
 
 def validate_task_struct(task: dict):
     keys = task.keys()
@@ -27,7 +29,7 @@ def generate_task_id(task: dict):
     return task
 
 
-
+@custom_logger.execute
 def add_task(data: json, task):
     task_parsed = json.loads(task)
 
