@@ -9,11 +9,7 @@ def filter_tasks(status):
         "list-not-done": "not done",
     }
 
-    tasks_filtered = []
-
-    for task in tasks:
-        if task.get("status") == status_dict[status]:
-            tasks_filtered.append(task)
+    tasks_filtered = [t for t in tasks if t.get("status") == status_dict[status]]
 
     return tasks_filtered
 
