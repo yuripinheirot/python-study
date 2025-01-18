@@ -1,5 +1,5 @@
-import json
 import uuid
+import json
 
 from file_manager import write_file, read_file
 
@@ -37,7 +37,7 @@ def add_task(data: json, task):
 
     task_with_id = generate_task_id(task_parsed)
     data.append(task_with_id)
-    write_file(data)
+    write_file.execute(data)
 
-    print(read_file())
+    print(read_file.execute())
     print("Task added successfully!")

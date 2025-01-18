@@ -1,7 +1,6 @@
-import json
-from file_manager import read_file,write_file
+from file_manager import read_file, write_file
 
-tasks: list = read_file()
+tasks: list = read_file.execute()
 
 def delete_task(task_id: str):
     updated_tasks = []
@@ -13,6 +12,6 @@ def delete_task(task_id: str):
     if len(tasks) == len(updated_tasks):
         return print("Task to delete not found!")
 
-    write_file(updated_tasks)
+    write_file.execute(updated_tasks, "./data.json")
     print(updated_tasks)
     print("Task deleted successfully!")

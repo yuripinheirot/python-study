@@ -1,6 +1,6 @@
 from file_manager import read_file
 
-tasks: list = read_file()
+tasks: list = read_file.execute()
 
 def filter_tasks(status):
     status_dict = {

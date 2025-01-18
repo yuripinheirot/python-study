@@ -1,13 +1,14 @@
-from mycli import read_args
+from custom_cli import read_args
 from file_manager import read_file
-from add import add_task
+
 from list import list_tasks
+from add import add_task
 from update import update_task
-from delete import  delete_task
+from delete import delete_task
 
 
-args = read_args()
-data = read_file()
+args = read_args.execute()
+data = read_file.execute()
 
 
 def execute():

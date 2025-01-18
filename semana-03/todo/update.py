@@ -1,7 +1,7 @@
 import json
 from file_manager import read_file,write_file
 
-tasks: list = read_file()
+tasks: list = read_file.execute()
 
 def update_task(task_id: str, data: str):
     updated_tasks = []
@@ -14,6 +14,6 @@ def update_task(task_id: str, data: str):
         else:
             updated_tasks.append(task)
 
-    write_file(updated_tasks)
+    write_file.execute(updated_tasks)
     print(updated_tasks)
     print("Task deleted successfully!")

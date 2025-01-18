@@ -2,7 +2,7 @@ import argparse
 
 action_opts = ("list-all","list-done","list-not-done","list-in-progress", "add", "update", "delete", "set-in-progress", "set-done")
 
-def read_args():
+def execute():
     parser = argparse.ArgumentParser(description='To-Do List')
 
     parser.add_argument('--action', choices=action_opts, type=str, help='Action to execute')
@@ -11,5 +11,5 @@ def read_args():
 
     args = parser.parse_args()
 
-    return args
+    return args 
 
