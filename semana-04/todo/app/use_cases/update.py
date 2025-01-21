@@ -1,21 +1,24 @@
 import json
-from file_manager import read_file,write_file
-from decorators import custom_logger
+from typing import Callable
+from ..utils import FileManager
 
-tasks: list = read_file.execute()
 
-@custom_logger.execute
-def update_task(task_id: str, data: str):
+def update_task(
+    database: list,
+    file_manager: FileManager,
+    task_id: str,
+    updated_task: str,
+):
     updated_tasks = []
 
-    for task in tasks:
+    for task in database:
         if task.get("id") == task_id:
-            parsed_updated_task = json.loads(data)
+            parsed_updated_task = json.loads(updated_task)
             parsed_updated_task["id"] = task["id"]
             updated_tasks.append(parsed_updated_task)
         else:
             updated_tasks.append(task)
 
-    write_file.execute(updated_tasks)
+    file_manager.write(updated_tasks)
     print(updated_tasks)
     print("Task deleted successfully!")

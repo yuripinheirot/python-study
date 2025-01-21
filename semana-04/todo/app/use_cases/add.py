@@ -1,8 +1,6 @@
 import uuid
 import json
-
-from file_manager import write_file, read_file
-from decorators import custom_logger
+from ..utils import FileManager
 
 
 def validate_task_struct(task: dict):
@@ -24,22 +22,26 @@ def validate_task_struct(task: dict):
 
     return False
 
+
 def generate_task_id(task: dict):
-    task["id"] = str(uuid.uuid1()).split('-')[0]
+    task["id"] = str(uuid.uuid1()).split("-")[0]
     return task
 
 
-@custom_logger.execute
-def add_task(data: json, task):
-    task_parsed = json.loads(task)
+def add_task(
+    database: list,
+    file_manager: FileManager,
+    new_task: str,
+):
+    task_parsed = json.loads(new_task)
 
     has_error = validate_task_struct(task_parsed)
     if has_error:
         return
 
     task_with_id = generate_task_id(task_parsed)
-    data.append(task_with_id)
-    write_file.execute(data)
+    database.append(task_with_id)
+    file_manager.write(database)
 
-    print(read_file.execute())
+    print(file_manager.read())
     print("Task added successfully!")

@@ -1,6 +1,6 @@
 import time
 
-def execute(func):
+def log(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
         result = func(*args, **kwargs)
