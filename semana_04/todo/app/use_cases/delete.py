@@ -1,4 +1,4 @@
-from ..utils import FileManager
+from ..utils.file_manager import FileManager
 
 
 def delete_task(database: list, file_manager: FileManager, task_id: str):

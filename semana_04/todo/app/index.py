@@ -1,7 +1,8 @@
+import os
 from typing import Callable, TypedDict
 
-from utils.file_manager import FileManager
-from use_cases import add_task, update_task, delete_task, list_tasks
+from .utils.file_manager import FileManager
+from .use_cases import add_task, update_task, delete_task, list_tasks
 
 
 class ParamTypes(TypedDict):
@@ -10,7 +11,7 @@ class ParamTypes(TypedDict):
 
 class App:
     def __init__(self):
-        database_path = "./data/data.json"
+        database_path = os.path.join(os.getcwd(), "app", "data", "data.json")
 
         self.file_manager = FileManager(database_path)
         self.database = self.file_manager.read()

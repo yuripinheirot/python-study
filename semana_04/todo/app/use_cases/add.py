@@ -1,6 +1,6 @@
 import uuid
 import json
-from ..utils import FileManager
+from ..utils.file_manager import FileManager
 
 
 def validate_task_struct(task: dict):
