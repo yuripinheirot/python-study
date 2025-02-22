@@ -1,4 +1,4 @@
-from fastapi import Cookie, FastAPI, HTTPException, Request, Response
+from fastapi import Cookie, Depends, FastAPI, HTTPException, Request, Response
 from pydantic import BaseModel
 import uuid
 
@@ -62,6 +62,15 @@ def login(response: Response, payload: UserPayload):
         "username": user_finded["username"],
         "password": user_finded["password"],
     }
+
+
+def query_param(my_param: str = None, limit: int = 10):
+    return {"my_param": my_param, "limit": limit}
+
+
+@app.get("/search")
+def search(params: dict = Depends(query_param)):
+    return params
 
 
 @app.post("/change_password")
