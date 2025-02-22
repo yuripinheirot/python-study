@@ -25,6 +25,14 @@ app = FastAPI()
 users = [{"username": "yuri", "password": "yuri", "id": "e6043b32"}]
 
 
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    print(f"Request path: {request.url.path}")
+    response = await call_next(request)
+    print(f"Response status: {response.status_code}")
+    return response
+
+
 @app.get("/")
 def list_users():
     return users
