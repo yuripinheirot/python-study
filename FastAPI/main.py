@@ -1,7 +1,23 @@
+from datetime import datetime, timedelta, timezone
 from fastapi import Cookie, Depends, FastAPI, HTTPException, Request, Response
+from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
-import uuid
 from passlib.context import CryptContext
+import jwt
+import uuid
+
+users = [
+    {
+        "username": "admin",
+        "password": "$2b$12$twEcV0huWKR8kqP1NZglyu2lhHyJTpwk8mcbOMtvhXFJ4ewGYi2ZS",
+        "id": "e6043b32",
+    }
+]
+
+
+SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -12,6 +28,22 @@ def verify_password(password: str, hashed_password: str) -> bool:
 
 def get_password_hash(password: str) -> str:
     return pwd_context.hash(password)
+
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+
+def create_access_token(data: dict):
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
+
+def get_current_user(token: str = Depends(oauth2_scheme)):
+    credentials_exception = HTTPException(
+        status_code=401, detail="Could not validate credentials"
+    )
 
 
 class User(BaseModel):
@@ -31,9 +63,6 @@ class ChangePasswordPayload(BaseModel):
 
 
 app = FastAPI()
-
-
-users = [{"username": "yuri", "password": "yuri", "id": "e6043b32"}]
 
 
 @app.middleware("http")
@@ -72,11 +101,9 @@ def login(response: Response, payload: UserPayload):
 
     response.set_cookie(key="token", value=user_finded["id"])
 
-    return {
-        "id": user_finded["id"],
-        "username": user_finded["username"],
-        "password": user_finded["password"],
-    }
+    token = create_access_token(data={"sub": user_finded["id"]})
+
+    return {"access_token": token}
 
 
 def query_param(my_param: str = None, limit: int = 10):
