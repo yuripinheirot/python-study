@@ -1,6 +1,17 @@
 from fastapi import Cookie, Depends, FastAPI, HTTPException, Request, Response
 from pydantic import BaseModel
 import uuid
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+
+def verify_password(password: str, hashed_password: str) -> bool:
+    return pwd_context.verify(password, hashed_password)
+
+
+def get_password_hash(password: str) -> str:
+    return pwd_context.hash(password)
 
 
 class User(BaseModel):
@@ -42,20 +53,24 @@ def list_users():
 def create_user(user: UserPayload):
     new_user = user.model_dump()
     new_user["id"] = str(uuid.uuid1()).split("-")[0]
+    new_user["password"] = get_password_hash(new_user["password"])
     users.append(new_user)
     return users[-1]
 
 
 @app.post("/login")
 def login(response: Response, payload: UserPayload):
-    response.set_cookie(key="token", value="1234567890")
-
     user_finded = next(
         (user for user in users if user["username"] == payload.username), None
     )
 
     if user_finded is None:
         raise HTTPException(status_code=404, detail="User not found")
+
+    if not verify_password(payload.password, user_finded["password"]):
+        raise HTTPException(status_code=401, detail="Invalid password")
+
+    response.set_cookie(key="token", value=user_finded["id"])
 
     return {
         "id": user_finded["id"],
