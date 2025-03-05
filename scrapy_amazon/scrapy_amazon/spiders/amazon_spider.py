@@ -7,6 +7,10 @@ import scrapy
 class EletrosSpider(scrapy.Spider):
     name = "eletros"
 
+    def __init__(self):
+        super().__init__()
+        self.all_items = []
+
     def start_requests(self):
         urls = [
             "https://www.mercadolivre.com.br/ofertas?container_id=MLB779362-1&promotion_type=lightning#deal_print_id=4c516e10-f9d5-11ef-b872-5747ac35524b&c_id=carousel&c_element_order=4&c_campaign=BOLOTA_MAIS-VENDIDOS&c_uid=4c516e10-f9d5-11ef-b872-5747ac35524b",
@@ -49,5 +53,6 @@ class EletrosSpider(scrapy.Spider):
 
             items.append({"title": title, "price": price})
 
-        self.export_json(items)
+        self.all_items.extend(items)
+        self.export_json(self.all_items)
         return items

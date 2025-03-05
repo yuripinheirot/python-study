@@ -37,12 +37,12 @@
     "price": "689.92"
   },
   {
-    "title": "Microfone Sem Fio Duplo Magn\u00e9tica Para iPhone Type-c Android",
-    "price": "230.30"
+    "title": "Kit Teclado Musical Casio Profissional Ctk3500 + Acess\u00f3rios",
+    "price": "1.356.00"
   },
   {
-    "title": "Bateria Eletr\u00f4nica Seven Sd-770 7p\u00e7s",
-    "price": "1.924.00"
+    "title": "Rode Wireless Go Ii Single Microfone Lapela Recorder Nf-e",
+    "price": "1.742.00"
   },
   {
     "title": "Guitarra Strato Tagima Sixmart Cinza Met\u00e1lico Hss C/ Efeitos",
@@ -69,12 +69,12 @@
     "price": "1.047.00"
   },
   {
-    "title": "Kit Teclado Musical Casio Profissional Ctk3500 + Acess\u00f3rios",
-    "price": "1.356.00"
+    "title": "Microfone Sem Fio J12 Ulanzi P/ Android Tipo C - 2 Mics",
+    "price": "269.69"
   },
   {
-    "title": "Rode Wireless Go Ii Single Microfone Lapela Recorder Nf-e",
-    "price": "1.742.00"
+    "title": "Kit Violao Giannini Eletrico Nf14 Nylon Acess\u00f3rios Completo",
+    "price": "805.63"
   },
   {
     "title": "Kit 6 Caixas De Embutir Arandela 5pol 55w Som Ambiente ",
@@ -153,7 +153,6 @@
     "title": "Teclado Sintetizador Roland Xps10 61 Teclas Bivolt - Preto 110v/220v",
     "price": "3.780.00"
   },
-  { "title": "Teclado Arranjador Yamaha Psr Sx600", "price": "5.279.00" },
   {
     "title": "Bateria Premium Dx722, Completa, Banco, Prato, Pedal",
     "price": "2.840.00"
@@ -205,5 +204,192 @@
   {
     "title": "Mesa De Som Taramps T0602 Multicolor Led Rgb Nos Bot\u00f5es Equalizador Som Automotivo Xlr P10 Rca 0602 6 Entradas Audio Mixer 98 Efeitos De Iluminacao 12v Equalizadora Para Igrejas Comercios Festas",
     "price": "531.92"
+  },
+  {
+    "title": "Teclado Casio Ctx-5000 Arranjador 61 Teclas Sensitivas Fonte",
+    "price": "2.305.00"
+  },
+  {
+    "title": "Smart Tv Samsung Un50du8000gxzd 50'' Uhd 4k Crystal",
+    "price": "2.359.00"
+  },
+  {
+    "title": "Lavadora De Alta Press\u00e3o 1200w Master 1500 Psi Amarelo E Preto Tramontina 127v",
+    "price": "323.10"
+  },
+  {
+    "title": "Escada De Alum\u00ednio Multifuncional Botafogo Lar & Lazer Esc0291 Cinza",
+    "price": "329.00"
+  },
+  {
+    "title": "Fritadeira Air Fryer Oven Mondial Afon-12l-fb 2 Em 1 12l 2000w Cor Preta 127v",
+    "price": "599.00"
+  },
+  {
+    "title": "M\u00e1quina De Lavar Electrolux 14kg Branca Essential Care Com Cesto Inox E Jet&clean Led14 110v",
+    "price": "1.851.00"
+  },
+  {
+    "title": "Caixa Termica Suv Cooler Com Al\u00e7a 20 Litros Praia Pesca Camping Cor Preto E Amarelo Termolar",
+    "price": "65.00"
+  },
+  {
+    "title": "Lavadora De Alta Press\u00e3o Master Dom\u00e9stica Jato Regul\u00e1vel 1500psi Com 1200w Amarelo E Preto Tramontina 220v",
+    "price": "323.10"
+  },
+  {
+    "title": "Furadeira Parafusadeira Sem Fio De 10mm Philco Ppf12m 12v + Acess\u00f3rio 110v/220v",
+    "price": "179.90"
+  },
+  { "title": "Camiseta Basica Tech Insider Masculina", "price": "123.00" },
+  {
+    "title": "Parafusadeira Furadeira 21v 2 Baterias Profissional Bivolt",
+    "price": "199.00"
+  },
+  {
+    "title": "Lavadora De Alta Press\u00e3o Philco Plp2300 1750psi 12 Mpa 1500w Cor Azul 127v",
+    "price": "348.75"
+  },
+  {
+    "title": "Furadeira De Impacto 3/8 Pol. 10mm 550w + Kit 300 Pe\u00e7as",
+    "price": "168.00"
+  },
+  {
+    "title": "Smart Tv LG 65  4k Ultra Hd Nanocell 65nano80t Thinq Ai Webos 24 A5 Ger7 Ai Hdmi Usb Wi-fi Bluetooth Alexa Chromecast Com Controle Smart Magic",
+    "price": "3.514.00"
+  },
+  {
+    "title": "Smart Tv 75'' Crystal Uhd 4k 75du8000 2024 Samsung",
+    "price": "5.157.00"
+  },
+  {
+    "title": "Gazebo The Black Tools Btg300 Quadrado Cor Azul De 3m X 3m",
+    "price": "519.00"
+  },
+  {
+    "title": "Fritadeira Air Fryer Oven Pfr2200p 4 Em 1 12l Preto Philco 220v",
+    "price": "609.90"
+  },
+  {
+    "title": "Smart Tv 4k 65  LG Uhd 65ut8050 Processador 5 Ger7 Ai Alexa/chromecast Integrado Otimizador De Jogos Webos 24 Controle Smart Magic",
+    "price": "3.491.00"
+  },
+  {
+    "title": "Bebedouro De Mesa Oz Gela \u00c1gua Refrigerado El\u00e9trico Gal\u00e3o 20 Litros Aqua Bivolt Br2400 127v/220v",
+    "price": "384.00"
+  },
+  {
+    "title": "Smart Tv 4k LG Uhd 60'' Bluetooth Hdr Ai Thinq Smart Magic Google Alexa 60uq8050psb",
+    "price": "3.134.00"
+  },
+  {
+    "title": "Multi Ho441 Rob\u00f4 Aspirador 110v/220v Vermelho E Preto 20w",
+    "price": "254.00"
+  },
+  {
+    "title": "Umidificador Ultrass\u00f4nico De Ar Port\u00e1til 2,4 Litros Bivolt 110/220v Serenno Veronna",
+    "price": "149.00"
+  },
+  {
+    "title": "Tela De Arame Galvanizado Horta Galinheiro Fio 23 1,80x50m Bcg180 - The Black Tools",
+    "price": "278.00"
+  },
+  {
+    "title": "Liquidificador Robust Liq400 3,3 Litros Preto Cadence 220v",
+    "price": "131.08"
+  },
+  {
+    "title": "Fritadeira Air Fryer Oven Veronna Splendore Vaf1800d 4 Em 1 12 Litros Painel Digital 1700w Cor Preta 127v",
+    "price": "579.00"
+  },
+  {
+    "title": "Guincho Hidr\u00e1ulico Dobr\u00e1vel 1 Ton Com Prolongador Com Rodas De Ferro Tipo Girafa Cor Amarela Tgh500a The Black Tools",
+    "price": "1.598.00"
+  },
+  {
+    "title": "Coletor De \u00d3leo A V\u00e1cuo 80l Com Recipiente Para Inspe\u00e7\u00e3o",
+    "price": "1.899.00"
+  },
+  {
+    "title": "Kit 6 Camiseta Masculina Algod\u00e3o Confort By Zaroc",
+    "price": "124.83"
+  },
+  {
+    "title": "Parafusadeira 4,8v 250 Rpm Bivolt Com Bits Pb600 Oz Cor Preto Frequ\u00eancia 60hz 110v/220v",
+    "price": "35.90"
+  },
+  {
+    "title": "Guincho Hidr\u00e1ulico 1 Ton Com Prolongador E Rodas De Ferro",
+    "price": "1.446.00"
+  },
+  {
+    "title": "Conjunto Cal\u00e7a Pantalona E Blusa Gola Alta Wide Leg",
+    "price": "38.35"
+  },
+  {
+    "title": "Liquidificador Pglq352 Revolution Glass Copo De Vidro 2 Litros Pot\u00eancia De 1000w Cor Cobre Gradiente 110v/127v",
+    "price": "364.00"
+  },
+  { "title": "Mala De Viagem Pequena Preto Mickey Luxcel", "price": "340.00" },
+  { "title": "Botafogo Piscina 1.000 Litros", "price": "189.00" },
+  {
+    "title": "6 Pe\u00e7as Cesto Empilhavel Expositor Organizador Preto The Black Tools",
+    "price": "69.90"
+  },
+  { "title": "\u00d3culos De Sol Wayfarer Unissex Ray-ban", "price": "786.99" },
+  {
+    "title": "Mini Torno Mec\u00e2nico Profissional Fortg 350mm 550w 110v",
+    "price": "3.596.00"
+  },
+  {
+    "title": "Kit 5 Camisa Camisetas Regata Dry Fit Tecnologica Ultra Leve",
+    "price": "96.33"
+  },
+  {
+    "title": "Kit 3 Cal\u00e7a Jeans Feminina Skinny Com Lycra Empina Bumbum",
+    "price": "165.58"
+  },
+  {
+    "title": "T\u00eanis Casual Feminino Carina Puma *oferta*",
+    "price": "268.99"
+  },
+  {
+    "title": "M\u00e1scara E \u00d3culos De Solda Auto Escurecimento Profissional Com Eletrodo The Black Tools",
+    "price": "129.90"
+  },
+  { "title": "Barreda Ji2306", "price": "208.99" },
+  {
+    "title": "Lavadora De Alta Press\u00e3o Master 42545 Jato Regul\u00e1vel 1500psi Com 1200w Amarelo E Preto Tramontina 127v",
+    "price": "359.10"
+  },
+  {
+    "title": "Camisa T\u00e9rmica Voker Academia Prote\u00e7\u00e3o Solar Uv Dry Fit",
+    "price": "33.17"
+  },
+  {
+    "title": "Furadeira E Parafusadeira De Impacto 21v K21 Id02 Wap + Kit",
+    "price": "298.00"
+  },
+  {
+    "title": "Carrinho Tipo Esteira Para Mec\u00e2nico Profissional Com Encosto",
+    "price": "199.00"
+  },
+  { "title": "Polo Aramis Masculina Basic Piquet Preta", "price": "162.99" },
+  { "title": "T\u00eanis Masculino Pride 3  Olympikus", "price": "236.99" },
+  {
+    "title": "Sand\u00e1lia Crocband Off Court Clog  Black",
+    "price": "178.38"
+  },
+  {
+    "title": "Camisa De Futebol Masculina I Flamengo 2025 S/n adidas",
+    "price": "386.99"
+  },
+  {
+    "title": "Blusa Feminino Um Ombro S\u00f3 Assimetrico Casual M Ao Gg",
+    "price": "25.65"
+  },
+  {
+    "title": "Assentador De Tal\u00e3o Canh\u00e3o De Ar P/ Pneus",
+    "price": "484.90"
   }
 ]
